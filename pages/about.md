@@ -24,7 +24,7 @@ The year 2020 marks the 100th anniversary of the passage of the 19th Amendment, 
 
 "She Changed the World: NC Women Breaking Barriers," an initiative by the North Carolina Deparment of Natural and Cultural Resources, celebrates the achievements of North Carolina women and explores the diversity of their experiences and impact on our history.
 
-{% include feature/button.html text="Find Out More About 'She Changed the World'" link="https://www.dncr.nc.gov/about/featured-programs/she-changed-world-north-carolina-women-breaking-barriers" color="#404383" centered="true" %}
+{% include feature/button.html text="Find Out More About 'She Changed the World'" link="https://www.dncr.nc.gov/about/featured-programs/she-changed-world-north-carolina-women-breaking-barriers" color="success" centered="true" %}
 
 The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring togehter content from the State Archives of North Carolina and the State Library of North Carolina.
 
