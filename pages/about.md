@@ -8,26 +8,23 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="https://cdil.lib.uidaho.edu/images/palouse_sm.jpg" %} 
+{% include feature/jumbotron.html text="She Changed the World" %} 
 
-{% include feature/nav-menu.html sections="About CollectionBuilder CSV;About the About Page" %}
+{% include feature/nav-menu.html sections="About the Collection;Learn More" %}
 
-## About CollectionBuilder CSV
+## About the Collection
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+This website pulls together previously digitized state publications, photographs, letters, oral histories, posters, and other materials available online.  The goal is to create a quick, easy to use introduction to women's history in North Carolina as part of "she Changed the World: NC Women Breaking Barriers," an initiative by the North Carolina Department of Natural and Cultural Resources.
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+{% include feature/card.html header="New Homemakers of America: History--Executive Council and State Officers--Photographs" objectid="coll041" width="25" centered=true %}
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+## Learn More
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
+The year 2020 marks the 100th anniversary of the passage of the 19th Amendment, guaranteeing and protecting women's constitutional right to vote.  Despite decades of marches, petitions, and passage of the 19th Amendment, it did not grant voting rights for all.  The ongoing fight for equity continues today.
 
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
+"She Changed the World: NC Women Breaking Barriers," an initiative by the North Carolina Deparment of Natural and Cultural Resources, celebrates the achievements of North Carolina women and explores the diversity of their experiences and impact on our history.
 
-{% include feature/image.html objectid="psychiana038" width="75" %}
-{% include feature/card.html header="This is a Card" text="The card features an image from the collection as a cap" objectid="psychiana006" width="25" centered=true %}
-{% include feature/image.html objectid="https://www.lib.uidaho.edu/collectionbuilder/demo-objects/mg101_b6_photographs_01.jpg" width="75" alt="Frank B. Robinson at the Organ" caption="This guy is good!"%}
+{% include feature/button.html text="Find Out More About 'She Changed the World' %}
+
+The North Carolina Digital Collections (NCDC) contain over 90,000 historic and recent photographs, state government publications, manuscripts, and other resources on topics related to North Carolina.  The Collections are free and full-text searchable, and bring togehter content from the State Archives of North Carolina and the State Library of North Carolina.
 
