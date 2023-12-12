@@ -1,18 +1,44 @@
----
-# find all unique locations used in the metadata
-#
-# Requires CB's array_count_uniq.rb plugin!
----
-{%- if site.data.theme.locations-fields -%}
-{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
-{%- assign locations-fields = site.data.theme.locations-fields | split: ";" -%}
-{%- assign places = "" -%}
-{%- for c in locations-fields -%}
-{% assign new = items | map: c | join: ";" %}
-{% assign places = places | append: ";" | append: new %}
-{%- endfor -%}
-{%- assign uniqPlaces = places | downcase | split: ";" | array_count_uniq -%}
 location,count,link
-{% for s in uniqPlaces %}"{{ s[0] }}",{{ s[1] }},"{{ s[0] | url_param_escape | prepend: '/browse.html#' | absolute_url }}"
-{% endfor %}
-{%- endif -%}
+"north carolina",35,"https://she-changed-world.cb.ncpedia.org/browse.html#north%20carolina"
+"raleigh, wake county, north carolina",9,"https://she-changed-world.cb.ncpedia.org/browse.html#raleigh,%20wake%20county,%20north%20carolina"
+"wake county, north carolina",6,"https://she-changed-world.cb.ncpedia.org/browse.html#wake%20county,%20north%20carolina"
+"black mountain, buncombe county, north carolina",5,"https://she-changed-world.cb.ncpedia.org/browse.html#black%20mountain,%20buncombe%20county,%20north%20carolina"
+"guilford county, north carolina",4,"https://she-changed-world.cb.ncpedia.org/browse.html#guilford%20county,%20north%20carolina"
+"buncombe county, north carolina",4,"https://she-changed-world.cb.ncpedia.org/browse.html#buncombe%20county,%20north%20carolina"
+"swain county, north carolina",3,"https://she-changed-world.cb.ncpedia.org/browse.html#swain%20county,%20north%20carolina"
+"greensboro, guilford county, north carolina",3,"https://she-changed-world.cb.ncpedia.org/browse.html#greensboro,%20guilford%20county,%20north%20carolina"
+"sedalia, guilford county, north carolina",2,"https://she-changed-world.cb.ncpedia.org/browse.html#sedalia,%20guilford%20county,%20north%20carolina"
+"guilford county, north caroliana",2,"https://she-changed-world.cb.ncpedia.org/browse.html#guilford%20county,%20north%20caroliana"
+"henderson county, north carolina",2,"https://she-changed-world.cb.ncpedia.org/browse.html#henderson%20county,%20north%20carolina"
+"asheville, buncombe county, north carolina",2,"https://she-changed-world.cb.ncpedia.org/browse.html#asheville,%20buncombe%20county,%20north%20carolina"
+"richmond, richmond (city), virginia",2,"https://she-changed-world.cb.ncpedia.org/browse.html#richmond,%20richmond%20(city),%20virginia"
+"london, united kingdom",2,"https://she-changed-world.cb.ncpedia.org/browse.html#london,%20united%20kingdom"
+"france",1,"https://she-changed-world.cb.ncpedia.org/browse.html#france"
+"new york city, new york county, new york",1,"https://she-changed-world.cb.ncpedia.org/browse.html#new%20york%20city,%20new%20york%20county,%20new%20york"
+"griffith park, los angeles, california",1,"https://she-changed-world.cb.ncpedia.org/browse.html#griffith%20park,%20los%20angeles,%20california"
+"fort bragg, hoke county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#fort%20bragg,%20hoke%20county,%20north%20carolina"
+"hoke county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#hoke%20county,%20north%20carolina"
+"orange county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#orange%20county,%20north%20carolina"
+"fort mcclellan, calhoun county, alabama",1,"https://she-changed-world.cb.ncpedia.org/browse.html#fort%20mcclellan,%20calhoun%20county,%20alabama"
+"germany",1,"https://she-changed-world.cb.ncpedia.org/browse.html#germany"
+"chapel hill, orange county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#chapel%20hill,%20orange%20county,%20north%20carolina"
+"great lake, craven county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#great%20lake,%20craven%20county,%20north%20carolina"
+"craven county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#craven%20county,%20north%20carolina"
+"robeson county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#robeson%20county,%20north%20carolina"
+"red springs, robeson county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#red%20springs,%20robeson%20county,%20north%20carolina"
+"warrenton, warren county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#warrenton,%20warren%20county,%20north%20carolina"
+"warren county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#warren%20county,%20north%20carolina"
+"atlanta, fulton county, georgia",1,"https://she-changed-world.cb.ncpedia.org/browse.html#atlanta,%20fulton%20county,%20georgia"
+"caruthersville, pemiscot county, missouri",1,"https://she-changed-world.cb.ncpedia.org/browse.html#caruthersville,%20pemiscot%20county,%20missouri"
+"darlington, darlington county, south carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#darlington,%20darlington%20county,%20south%20carolina"
+"fayetteville, cumberland county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#fayetteville,%20cumberland%20county,%20north%20carolina"
+"orangeburg, orangeburg county, south carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#orangeburg,%20orangeburg%20county,%20south%20carolina"
+"tuskegee, macon county, alabama",1,"https://she-changed-world.cb.ncpedia.org/browse.html#tuskegee,%20macon%20county,%20alabama"
+"winston-salem, forsyth county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#winston-salem,%20forsyth%20county,%20north%20carolina"
+"mcdowell county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#mcdowell%20county,%20north%20carolina"
+"fort lee, prince george county, virginia",1,"https://she-changed-world.cb.ncpedia.org/browse.html#fort%20lee,%20prince%20george%20county,%20virginia"
+"salisbury, rowan county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#salisbury,%20rowan%20county,%20north%20carolina"
+"australia",1,"https://she-changed-world.cb.ncpedia.org/browse.html#australia"
+"new guinea, papua new guinea",1,"https://she-changed-world.cb.ncpedia.org/browse.html#new%20guinea,%20papua%20new%20guinea"
+"transylvania county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#transylvania%20county,%20north%20carolina"
+"durham, durham county, north carolina",1,"https://she-changed-world.cb.ncpedia.org/browse.html#durham,%20durham%20county,%20north%20carolina"
