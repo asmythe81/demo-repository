@@ -1,11 +1,9 @@
 color_class,color
-primary, #A680BB
+primary, 
 secondary,
-success, #5154a5
+success, 
 info,
 warning,
 danger,
 light,
 dark,
-sctwlight, #A680BB
-sctwdark, #5154a5
